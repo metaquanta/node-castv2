@@ -1,7 +1,8 @@
-var Client = require('./lib/client');
-var Server = require('./lib/server');
-var DeviceAuthMessage = require('./lib/proto').DeviceAuthMessage;
+import Client from "./lib/client.js";
+import Server from "./lib/server.js";
+import { extensions } from "./lib/cast_channel.proto.js";
+const DeviceAuthMessage = extensions.api.cast_channel.DeviceAuthMessage;
 
-module.exports.Client = Client;
-module.exports.Server = Server;
-module.exports.DeviceAuthMessage = DeviceAuthMessage;
+export { Client };
+export { Server };
+export { DeviceAuthMessage };
